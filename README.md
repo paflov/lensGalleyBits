@@ -1,4 +1,4 @@
-# ojs-plugin-lense-bits
+# ojs-plugin-lens-bits
 
 This plugin employes an enhanced Version of the Lens Viewer, which was developed for HeiUP,
 and can handle a lot of additional JATS- and DARTS-Tags like
