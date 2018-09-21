@@ -14,3 +14,4 @@ enhance tables, section metadata,  Abstracts etc.
 
 * tested with OJS 3.2.0.0
 * please disable the normal Lens-Plugin
+* Branch for OJS 3.1.x by Vitaly-1: https://github.com/paflov/ojs-plugin-lens-bits/tree/lens-bits-ojs-3.1
