@@ -25,6 +25,7 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 				HookRegistry::register('ArticleHandler::view::galley', array($this, 'articleCallback'));
 				HookRegistry::register('IssueHandler::view::galley', array($this, 'issueCallback'));
 				HookRegistry::register('ArticleHandler::download', array($this, 'articleDownloadCallback'), HOOK_SEQUENCE_LATE);
+				$this->_registerTemplateResource();
 			}
 			return true;
 		}
@@ -53,7 +54,7 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 	function getDescription() {
 		return __('plugins.generic.lensGalleyBits.description');
 	}
-
+	
 	/**
 	 * Callback that renders the article galley.
 	 * @param $hookName string
@@ -65,12 +66,12 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 		$issue =& $args[1];
 		$galley =& $args[2];
 		$article =& $args[3];
-
+		
 		$templateMgr = TemplateManager::getManager($request);
 		if ($galley && in_array($galley->getFileType(), array('application/xml', 'text/xml'))) {
 			$templateMgr->assign(array(
 				'pluginLensPath' => $this->getLensPath($request),
-				'displayTemplatePath' => $this->getTemplateResource('display.tpl'),
+				'displayTemplatePath' => $this->getTemplatePath() . 'display.tpl',
 				'pluginUrl' => $request->getBaseUrl() . '/' . $this->getPluginPath(),
 				'galleyFile' => $galley->getFile(),
 				'issue' => $issue,
@@ -78,13 +79,13 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 				'galley' => $galley,
 				'jQueryUrl' => $this->_getJQueryUrl($request),
 			));
-			$templateMgr->display($this->getTemplateResource('articleGalley.tpl'));
+			$templateMgr->display($this->getTemplatePath() . '/articleGalley.tpl');
 			return true;
 		}
-
+		
 		return false;
 	}
-
+	
 	/**
 	 * Callback that renders the issue galley.
 	 * @param $hookName string
@@ -95,12 +96,12 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 		$request =& $args[0];
 		$issue =& $args[1];
 		$galley =& $args[2];
-
+		
 		$templateMgr = TemplateManager::getManager($request);
 		if ($galley && $galley->getFileType() == 'application/xml') {
 			$templateMgr->assign(array(
 				'pluginLensPath' => $this->getLensPath($request),
-				'displayTemplatePath' => $this->getTemplateResource('display.tpl'),
+				'displayTemplatePath' => $this->getTemplatePath() . 'display.tpl',
 				'pluginUrl' => $request->getBaseUrl() . '/' . $this->getPluginPath(),
 				'galleyFile' => $galley->getFile(),
 				'issue' => $issue,
@@ -115,13 +116,13 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 					'contexts' => 'frontend',
 				)
 			);
-			$templateMgr->display($this->getTemplateResource('issueGalley.tpl'));
+			$templateMgr->display($this->getTemplatePath() . '/issueGalley.tpl');
 			return true;
 		}
-
+		
 		return false;
 	}
-
+	
 	/**
 	 * Get the URL for JQuery JS.
 	 * @param $request PKPRequest
@@ -135,7 +136,7 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 			return $request->getBaseUrl() . '/lib/pkp/lib/components/jquery/jquery' . $min . '.js';
 		}
 	}
-
+	
 	/**
 	 * returns the base path for Lens JS included in this plugin.
 	 * @param $request PKPRequest
@@ -144,7 +145,14 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 	function getLensPath($request) {
 		return $request->getBaseUrl() . '/' . $this->getPluginPath() . '/lib/lens';
 	}
-
+	
+	/**
+	 * @copydoc Plugin::getTemplatePath()
+	 */
+	function getTemplatePath($inCore = false) {
+		return $this->getTemplateResourceName() . ':templates/';
+	}
+	
 	/**
 	 * Present rewritten XML.
 	 * @param string $hookName
