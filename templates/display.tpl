@@ -7,9 +7,12 @@
  *
  * Embedded viewing of a JATS XML galley.
  *}
-<script src="{$jQueryUrl}"></script>
+
+<script src="{$pluginLensPath}/lib/jquery-3.2.1.js"></script>
+<script src="{$pluginLensPath}/locales.js"></script>
 <script src="{$pluginLensPath}/lens.js"></script>
 <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 <script type="text/javascript">{literal}
 
 	var linkElement = document.createElement("link");
@@ -17,8 +20,9 @@
 	linkElement.href = "{/literal}{$pluginLensPath|escape:"javascript"}{literal}/lens.css"; //Replace here
 
 	document.head.appendChild(linkElement);
-	console.log("yes!!!", "{$xmlUrl|escape:'javascript'}");
 	$(document).ready(function(){
+		History.started = false;
+		console.log("!");
 		var app = new Lens({
 			document_url: "{/literal}{$xmlUrl|escape:'javascript'}{literal}"
 		});
