@@ -1,6 +1,6 @@
-# OJS3  Lens-viewer plugin with [JATS](https://jats.nlm.nih.gov/archiving/) and [BITS](https://jats.nlm.nih.gov/extensions/bits/).
+# OJS3  Lens-viewer plugin for [JATS](https://jats.nlm.nih.gov/archiving/) and [BITS](https://jats.nlm.nih.gov/extensions/bits/).
 
-This plugin intergrated an enhanced Version of the Lens Viewer which handles BIS support
+This plugin intergrates an enhanced Version of the Lens Viewer which  supports BITS extensions.
 
 # Description
 =======
