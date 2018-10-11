@@ -30,7 +30,7 @@ Implemented Extensions
 | Resizable reader panel | being developped | | 
 | Software Source-code in Lens | being developped |[ticket](https://gitlab.ub.uni-heidelberg.de/wit/verlag-portale/issues/161) | 
 
-*Enhanced Lens-viewer: https://github.com/withanage/UBHD-Lens 
+* Enhanced Lens-viewer: https://github.com/withanage/UBHD-Lens 
 
 
 ## OJS 3.1+ Installation 
@@ -45,13 +45,15 @@ git clone https://github.com/paflov/ojs-plugin-lens-bits.git plugins/generic/len
 ```bash
 cd $OJS_PATH
 git clone https://github.com/paflov/ojs-plugin-lens-bits.git plugins/generic/lensGalleyBits
-git checkout 
+git checkout lens-bits-ojs-3.1
 ```
 
 
 
-## Note
+## Developers
+* https://github.com/paflov
+* https://github.com/withanage
+* https://github.com/Vitaliy-1
 
-* tested with OJS 3.2.0.0
-* please disable the normal Lens-Plugin
-* Branch for OJS 3.1.x by [Vitaly-1](https://github.com/Vitaliy-1): https://github.com/paflov/ojs-plugin-lens-bits/tree/lens-bits-ojs-3.1
+
+ 
