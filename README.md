@@ -17,7 +17,7 @@ Implemented Extensions
 | Enanced Citaton blocks (with uniquie IDs)   | ✓ | [demo](https://heiup.uni-heidelberg.de/reader/index/43/43-68-231-1-10-20151008.xml#content/box_25) |
 | Footnotes formatting support   | ✓ |  [demo](https://heiup.uni-heidelberg.de/reader/index/48/48-68-599-1-10-20160428.xml#footnotes/article_footnote_60)|
 | Footnotes internal navigation into references   | ✓ | [demo](https://heiup.uni-heidelberg.de/reader/index/310/310-69-79515-1-10-20171115.xml#figures)|
-| Paragraph formatting using CSS-Stylesheets   | ✓ | |
+| Paragraph formatting using CSS-Stylesheets   | ✓ |[read here](https://github.com/withanage/UBHD-Lens/blob/master/README.md#open-your-browser)|
 | Quotes (unique ids, formatting supported)  | ✓ | [demo](https://heiup.uni-heidelberg.de/reader/index/48/48-68-599-1-10-20160428.xml#content/quote_2)|
 | Section metadata for monographs   | | |
 | - Section authors/contributors | ✓ | [demo](https://heiup.uni-heidelberg.de/reader/index/345/345-68-81466-2-10-20180620.xml#content/heading_39) |
