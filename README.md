@@ -3,13 +3,12 @@
 This plugin intergrates an enhanced Version of the Lens Viewer which  supports BITS extensions.
 
 # Description
-===
 
 Browser-based HTML Viewer for Journal Articles and Monographs based on JATS Standard XML files.based on elifescience Lens Viewer.
 
-Functionality for BITS (Book extension for JATS)  is limitedly avalialbe and constantly developed.
+Functionality for BITS (Book extension for JATS)  is limitedly avalialbe and constantly enhanced.
 
-Implemented Extensions
+##Implemented Extensions
 
 | Feature |	Ready | Live Links in monographs |
 | --- | --- | --- |
@@ -33,7 +32,7 @@ Implemented Extensions
 * Enhanced Lens-viewer: https://github.com/withanage/UBHD-Lens 
 
 
-## OJS 3.1+ Installation 
+## OJS 3 Installation (supports OJS 3.1) 
 
 ### OJS 3.2
 ```bash
@@ -41,7 +40,7 @@ cd $OJS_PATH
 git clone https://github.com/paflov/ojs-plugin-lens-bits.git plugins/generic/lensGalleyBits
 ```
 
-### OJS 3.1
+### OJS 3.1+
 ```bash
 cd $OJS_PATH
 git clone https://github.com/paflov/ojs-plugin-lens-bits.git plugins/generic/lensGalleyBits
