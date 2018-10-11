@@ -3,7 +3,7 @@
 This plugin intergrates an enhanced Version of the Lens Viewer which  supports BITS extensions.
 
 # Description
-=======
+===
 
 Browser-based HTML Viewer for Journal Articles and Monographs based on JATS Standard XML files.based on elifescience Lens Viewer.
 
