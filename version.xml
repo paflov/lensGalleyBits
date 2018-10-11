@@ -14,7 +14,7 @@
 	<application>lensGalleyBits</application>
 	<type>plugins.generic</type>
 	<release>1.0.0.0</release>
-	<date>2013-07-02</date>
+	<date>2018-09-21</date>
 	<lazy-load>1</lazy-load>
 	<class>LensGalleyBitsPlugin</class>
 </version>
