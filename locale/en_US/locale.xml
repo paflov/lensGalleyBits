@@ -13,5 +13,5 @@
 
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.lensGalleyBits.displayName">eLife Lens Article Viewer with BITS exensions</message>
-	<message key="plugins.generic.lensGalleyBits.description">This is a modification of the shipped LenseViewer Plugin with BITS extensions.</message>
+	<message key="plugins.generic.lensGalleyBits.description">Plugin  extends  elife Lens Viewer(Tag Support, Customizations and User-Interface) for both Journals and Monographs</message>
 </locale>

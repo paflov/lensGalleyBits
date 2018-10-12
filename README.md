@@ -4,16 +4,16 @@ This plugin intergrates an enhanced Version of the Lens Viewer which  supports B
 
 # Description
 
-Browser-based HTML Viewer for Journal Articles and Monographs based on JATS Standard XML files.based on elifescience Lens Viewer.
+Browser-based HTML Viewer for Journal Articles and Monographs based on [JATS]((https://jats.nlm.nih.gov/archiving/))-standard XML files.based on elifescience Lens Viewer.
 
-Functionality for BITS (Book extension for JATS)  is limitedly avalialbe and constantly enhanced.
+Functionality for [BITS](https://jats.nlm.nih.gov/extensions/bits/) (Book extension for JATS)  is available and constantly enhanced.
 
 ##Implemented Extensions
 
 | Feature |	Ready | Live Links in monographs |
 | --- | --- | --- |
 | Audio/Video from external repositories| ✓ |[demo](https://heiup.uni-heidelberg.de/reader/index/310/310-69-79515-1-10-20171115.xml#figures) |
-| Enanced Citaton blocks (with uniquie IDs)   | ✓ | [demo](https://heiup.uni-heidelberg.de/reader/index/43/43-68-231-1-10-20151008.xml#content/box_25) |
+| Enhanced citation blocks (with unique IDs)   | ✓ | [demo](https://heiup.uni-heidelberg.de/reader/index/43/43-68-231-1-10-20151008.xml#content/box_25) |
 | Footnotes formatting support   | ✓ |  [demo](https://heiup.uni-heidelberg.de/reader/index/48/48-68-599-1-10-20160428.xml#footnotes/article_footnote_60)|
 | Footnotes internal navigation into references   | ✓ | [demo](https://heiup.uni-heidelberg.de/reader/index/310/310-69-79515-1-10-20171115.xml#figures)|
 | Paragraph formatting using CSS-Stylesheets   | ✓ |[read here](https://github.com/withanage/UBHD-Lens/blob/master/README.md#open-your-browser)|
@@ -29,23 +29,37 @@ Functionality for BITS (Book extension for JATS)  is limitedly avalialbe and con
 | Resizable reader panel | being developped | | 
 | Software Source-code in Lens | being developped |[ticket](https://gitlab.ub.uni-heidelberg.de/wit/verlag-portale/issues/161) | 
 
-* Enhanced Lens-viewer: https://github.com/withanage/UBHD-Lens 
+* Source: https://github.com/withanage/UBHD-Lens 
 
 
-## OJS 3 Installation (supports OJS 3.1) 
+## OJS 3 Installation
+ 
+### Command line
 
-### OJS 3.2
+#### OJS 3.2
 ```bash
-cd $OJS_PATH
-git clone https://github.com/paflov/ojs-plugin-lens-bits.git plugins/generic/lensGalleyBits
+cd $OJS_PATH/plugins/generic/
+git clone https://github.com/paflov/ojs-plugin-lens-bits.git lensGalleyBits
+# Set rights for the web-user, if necessary. e.g sudo chown -R www-data:www-data lensGalleyBits/
 ```
 
 ### OJS 3.1+
 ```bash
-cd $OJS_PATH
-git clone https://github.com/paflov/ojs-plugin-lens-bits.git plugins/generic/lensGalleyBits
+cd $OJS_PATH/plugins/generic/
+git clone https://github.com/paflov/ojs-plugin-lens-bits.git lensGalleyBits
 git checkout lens-bits-ojs-3.1
+# Set rights for the web-user, if necessary. e.g sudo chown -R www-data:www-data lensGalleyBits/
 ```
+## Configuration
+
+* Navigate to page  $MY_SERVER/$MY_OJS/index.php/$MY_JOURNAL/management/settings/website
+* Click on the tab -> plugins
+* Disable the following  plugin, if installed.
+image
+* Enable this Lens viewer plugin you just downloaded
+
+
+
 
 
 
