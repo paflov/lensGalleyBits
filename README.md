@@ -53,14 +53,24 @@ git checkout lens-bits-ojs-3.1
 ## Configuration
 
 * Navigate to page  $MY_SERVER/$MY_OJS/index.php/$MY_JOURNAL/management/settings/website
+
 * Click on the tab -> plugins
-* Disable the following  plugin, if installed.
-image
+
+* Disable the following  plugin, if enable.
+
+![lens_standard](templates/images/lens_stanard.png)
+
 * Enable this Lens viewer plugin you just downloaded
+![lens_bits](templates/images/lens_bits.png)
 
 
+* Submit your XML file into the journal and enjoy!
 
+## Feature requests, Bugs
+https://github.com/paflov/ojs-plugin-lens-bits/issues
 
+## Based on
+https://github.com/asmecher/lensGalley
 
 
 ## Developers
