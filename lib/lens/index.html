@@ -26,9 +26,7 @@
 
     <script>
 
-      // Little helper used to parse query strings from urls
-      // --------
-      //
+
 
       var qs = function () {
         var query_string = {};
@@ -51,8 +49,7 @@
         return query_string;
       } ();
 
-      // This document gets loaded by default
-      // --------
+
 </script>
 	  <!--<script src='lens.js'></script>-->
 	  <script>
@@ -60,12 +57,7 @@
 
       $(function() {
 
-        // Create a new Lens app instance
-        // --------
-        //
-        // Injects itself into body
-
-        var app = new window.Lens({
+             var app = new window.Lens({
           document_url: qs.url ? decodeURIComponent(qs.url) : documentURL
         });
 
