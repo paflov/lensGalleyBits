@@ -8,7 +8,8 @@ Browser-based HTML Viewer for Journal Articles and Monographs based on [JATS]((h
 
 Functionality for [BITS](https://jats.nlm.nih.gov/extensions/bits/) (Book extension for JATS)  is available and constantly enhanced.
 
-##Implemented Extensions
+## Implemented Extensions
+
 
 | Feature |	Ready | Live Links in monographs |
 | --- | --- | --- |
@@ -52,7 +53,7 @@ git checkout lens-bits-ojs-3.1
 ```
 ## Configuration
 
-* Navigate to page  $MY_SERVER/$MY_OJS/index.php/$MY_JOURNAL/management/settings/website
+* Navigate to page  `$MY_SERVER/$MY_OJS/index.php/$MY_JOURNAL/management/settings/website`
 
 * Click on the tab -> plugins
 
