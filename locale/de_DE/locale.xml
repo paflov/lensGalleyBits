@@ -12,6 +12,6 @@
   -->
 
 <locale name="de_DE" full_name="Deutsch">
-	<message key="plugins.generic.lensGalleyBits.displayName">elife Lens Viewer für Artikel</message>
-	<message key="plugins.generic.lensGalleyBits.description">Dieses Plugin stellt Unterstützung für JAT- XML-Fahnen mittels eLife Lens bereit.</message>
+	<message key="plugins.generic.lensGalleyBits.displayName">eLife Lens Viewer für Monographien und Zeitschriftenartikel</message>
+	<message key="plugins.generic.lensGalleyBits.description">Plugin erweitert eLife Lens Viewer (Tag-Unterstützung, Anpassungen und Benutzer-Interface) für Zeitschriften und Monographien.</message>
 </locale>
