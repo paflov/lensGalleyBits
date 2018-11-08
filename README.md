@@ -68,7 +68,7 @@ git checkout lens-bits-ojs-3.1
 * Submit your XML file into the journal and enjoy!
 
 ## Feature requests, Bugs
-https://github.com/paflov/ojs-plugin-lens-bits/issues
+https://github.com/paflov/lensGalleyBits/issues
 
 ## Based on
 https://github.com/asmecher/lensGalley
