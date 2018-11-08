@@ -27,8 +27,8 @@ Functionality for [BITS](https://jats.nlm.nih.gov/extensions/bits/) (Book extens
 | Table display in reading panel | ✓ | [demo](https://heiup.uni-heidelberg.de/reader/index/345/345-68-81466-2-10-20180620.xml#content/html_table_2)|
 | Table (unique id for reference)   | ✓ |[demo](https://heiup.uni-heidelberg.de/reader/index/345/345-68-81466-2-10-20180620.xml#content/html_table_2) |
 | Table formatting using JATS XML Attributes and CSS-Stylesheets | ✓ | |
-| Resizable reader panel | being developped | | 
-| Software Source-code in Lens | being developped |[ticket](https://gitlab.ub.uni-heidelberg.de/wit/verlag-portale/issues/161) | 
+| Resizable reader panel |:construction:| | 
+| Software Source-code in Lens | :construction:|[ticket](https://gitlab.ub.uni-heidelberg.de/wit/verlag-portale/issues/161) | 
 
 * Source: https://github.com/withanage/UBHD-Lens 
 
