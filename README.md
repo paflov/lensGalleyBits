@@ -11,7 +11,7 @@ Functionality for [BITS](https://jats.nlm.nih.gov/extensions/bits/) (Book extens
 ## Implemented Extensions
 
 
-| Feature |	Ready | Live Links in monographs |
+| Feature |	Status | Demo |
 | --- | --- | --- |
 | Audio/Video from external repositories| ✓ |[demo](https://heiup.uni-heidelberg.de/reader/index/310/310-69-79515-1-10-20171115.xml#figures) |
 | Enhanced citation blocks (with unique IDs)   | ✓ | [demo](https://heiup.uni-heidelberg.de/reader/index/43/43-68-231-1-10-20151008.xml#content/box_25) |
