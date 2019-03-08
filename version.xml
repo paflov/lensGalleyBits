@@ -13,7 +13,7 @@
 <version>
 	<application>lensGalleyBits</application>
 	<type>plugins.generic</type>
-	<release>1.0.0.1</release>
+	<release>1.0.0.0</release>
 	<date>2019-03-08</date>
 	<lazy-load>1</lazy-load>
 	<class>LensGalleyBitsPlugin</class>
