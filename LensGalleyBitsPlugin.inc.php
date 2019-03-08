@@ -71,7 +71,7 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 		if ($galley && in_array($galley->getFileType(), array('application/xml', 'text/xml'))) {
 			$templateMgr->assign(array(
 				'pluginLensPath' => $this->getLensPath($request),
-				'pluginTemplatePath' => $this->getTemplatePath(),
+				'displayTemplatePath' => $this->getTemplateResource('display.tpl'),
 				'pluginUrl' => $request->getBaseUrl() . '/' . $this->getPluginPath(),
 				'galleyFile' => $galley->getFile(),
 				'issue' => $issue,
@@ -79,7 +79,7 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 				'galley' => $galley,
 				'jQueryUrl' => $this->_getJQueryUrl($request),
 			));
-			$templateMgr->display($this->getTemplatePath() . '/articleGalley.tpl');
+			$templateMgr->display($this->getTemplateResource('articleGalley.tpl'));
 			return true;
 		}
 
@@ -101,7 +101,7 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 		if ($galley && $galley->getFileType() == 'application/xml') {
 			$templateMgr->assign(array(
 				'pluginLensPath' => $this->getLensPath($request),
-				'pluginTemplatePath' => $this->getTemplatePath(),
+				'displayTemplatePath' => $this->getTemplateResource('display.tpl'),
 				'pluginUrl' => $request->getBaseUrl() . '/' . $this->getPluginPath(),
 				'galleyFile' => $galley->getFile(),
 				'issue' => $issue,
@@ -116,7 +116,7 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 					'contexts' => 'frontend',
 				)
 			);
-			$templateMgr->display($this->getTemplatePath() . '/issueGalley.tpl');
+			$templateMgr->display($this->getTemplateResource('issueGalley.tpl'));
 			return true;
 		}
 
@@ -133,7 +133,7 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 		if (Config::getVar('general', 'enable_cdn')) {
 			return '//ajax.googleapis.com/ajax/libs/jquery/' . CDN_JQUERY_VERSION . '/jquery' . $min . '.js';
 		} else {
-			return $request->getBaseUrl() . '/lib/pkp/lib/components/jquery/jquery' . $min . '.js';
+			return $request->getBaseUrl() . '/lib/pkp/lib/vendor/components/jquery/jquery' . $min . '.js';
 		}
 	}
 
@@ -144,13 +144,6 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 	 */
 	function getLensPath($request) {
 		return $request->getBaseUrl() . '/' . $this->getPluginPath() . '/lib/lens';
-	}
-
-	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	/**

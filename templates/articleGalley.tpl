@@ -11,7 +11,7 @@
 
 <div class="page">
 	{capture assign="xmlUrl"}{url op="download" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal) escape=false}{/capture}
-	{include file="$pluginTemplatePath/display.tpl" xmlUrl=$xmlUrl}
+	{include file=$displayTemplatePath xmlUrl=$xmlUrl}
 </div>
 
 {include file="frontend/components/footer.tpl"}
