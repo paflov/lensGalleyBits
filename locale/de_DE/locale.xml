@@ -13,5 +13,5 @@
 
 <locale name="de_DE" full_name="Deutsch">
 	<message key="plugins.generic.lensGalleyBits.displayName">eLife Lens Viewer für Monographien und Zeitschriftenartikel</message>
-	<message key="plugins.generic.lensGalleyBits.description">Plugin erweitert eLife Lens Viewer (Tag-Unterstützung, Anpassungen und Benutzer-Interface) für Zeitschriften und Monographien.</message>
+	<message key="plugins.generic.lensGalleyBits.description">erweiterter eLife Lens Article Viewer für JATS XML (zusätzliche Monograhien Unterstützung mit BITS)</message>
 </locale>
