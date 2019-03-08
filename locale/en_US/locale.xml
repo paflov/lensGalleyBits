@@ -13,5 +13,5 @@
 
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.lensGalleyBits.displayName">eLife Lens  Viewer for Monographs and Journal articles</message>
-	<message key="plugins.generic.lensGalleyBits.description">Plugin  extends  eLife Lens Viewer (Tag Support, Customizations and User-Interface) for both Journals and Monographs</message>
+	<message key="plugins.generic.lensGalleyBits.description">enhance eLife Lens Article Viewer with additional support for Monograpsh and edited volumes </message>
 </locale>
