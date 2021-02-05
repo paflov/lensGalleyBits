@@ -194,12 +194,14 @@ class LensGalleyBitsPlugin extends GenericPlugin {
 			$submissionFileDao->getLatestRevisions($submissionFile->getSubmissionId(), SUBMISSION_FILE_PROOF),
 			$submissionFileDao->getLatestRevisionsByAssocId(ASSOC_TYPE_SUBMISSION_FILE, $submissionFile->getFileId(), $submissionFile->getSubmissionId(), SUBMISSION_FILE_DEPENDENT)
 		);
-		$referredArticle = null;
-		$articleDao = DAORegistry::getDAO('ArticleDAO');
+		$referredArticle = $referredPublication = null;
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$publicationService = Services::get('publication');
 		foreach ($embeddableFiles as $embeddableFile) {
 			// Ensure that the $referredArticle object refers to the article we want
-			if (!$referredArticle || $referredArticle->getId() != $galley->getSubmissionId()) {
-				$referredArticle = $articleDao->getById($galley->getSubmissionId());
+			if (!$referredArticle || !$referredPublication || $referredPublication->getData('submissionId') != $referredArticle->getId() || $referredPublication->getId() != $galley->getData('publicationId')) {
+				$referredPublication = $publicationService->get($galley->getData('publicationId'));
+				$referredArticle = $submissionDao->getById($referredPublication->getData('submissionId'));
 			}
 			$fileUrl = $request->url(null, 'article', 'download', array($referredArticle->getBestArticleId(), $galley->getBestGalleyId(), $embeddableFile->getFileId()));
 			$pattern = preg_quote($embeddableFile->getOriginalFileName());
